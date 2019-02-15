@@ -49,8 +49,9 @@ for n in np.arange(len(namesarray)):
 	# print(globals()[str(namesarray[n][1])])
 
 # build overlap lists of biomes
+#n and m here represent the column numbers that you want to calculate overlap for. By returning it to the commented versions next to lines 54 and 55, you can also calculate the overlap for every column with every other column.
 overlap_names = []
-for n in np.asarray([1,2]): # for n in np.arange(len(namesarray)):
+for n in np.asarray([1,2]): # for n in np.arange(len(namesarray)): 
 	for m in np.asarray([4]):# for m in np.arange(len(namesarray))[n+1:]:
 		this_overlap = namesarray[n][1] + "-" + namesarray[m][1]
 		overlap_names.append(this_overlap)
